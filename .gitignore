@@ -13,4 +13,5 @@ local_settings.py
 .settings
 media/CACHE
 reports
-node_modules
+node_modulesdb
+db

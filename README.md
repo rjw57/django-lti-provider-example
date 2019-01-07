@@ -4,6 +4,20 @@
 
 Example Django application using the [django-lti-provider](https://github.com/ccnmtl/django-lti-provider) library.
 
+## Dockerisation
+
+This version of the repo has been hacked to have a non-production ready Docker
+configuration which uses sqlite3 and enables debug.
+
+```bash
+$ docker build -t django-lti-provider-example .
+$ docker run -it -p 8000:8000 -v $PWD/db/:/tmp/db/ django-lti-provider-example
+```
+
+The application is now running at http://localhost:8000/. Add ``-v
+$PWD:/usr/src/app:ro`` to command line to reflect local changes without
+re-building container.
+
 ## Configuration
 
 1. Clone
